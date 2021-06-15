@@ -1,12 +1,23 @@
 import React, {Component} from 'react';
 import './App.css';
 
+class Subject extends Component{
+  render() {
+    return (
+      <header>
+        <h1>WEB</h1>
+        world wide WEB!
+      </header>
+      );
+  }
+}
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        Hello, React!!
-    </div>
+        <Subject></Subject>
+      </div>
     );
   }
 
