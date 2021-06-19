@@ -38,16 +38,13 @@ class App extends Component {
         </Subject> */}
          <header>
           <h1><a href="/" onClick={function(e){
-            console.log('event in', this);
-            e.preventDefault();
-            return;
             console.log(e);
             e.preventDefault();
             //this.state.Mode = 'welcome';
-            this.setState({
-              Mode:'welcome'
-            })
-      }}>{this.state.Subject.title}</a></h1>
+           this.setState({
+          Mode:'welcome'
+          });
+      }.bind(this)}>{this.state.Subject.title}</a></h1>
           {this.state.Subject.sub}
         </header>
         <TOC data={this.state.Content}></TOC>
