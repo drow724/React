@@ -29,6 +29,7 @@ class App extends Component {
       _title = this.state.Content[0].title;
       _desc = this.state.Content[0].desc;
     }
+    console.log('render', this);
     return (
       <div className="App">
         {/* <Subject 
@@ -37,13 +38,16 @@ class App extends Component {
         </Subject> */}
          <header>
           <h1><a href="/" onClick={function(e){
+            console.log('event in', this);
+            e.preventDefault();
+            return;
             console.log(e);
             e.preventDefault();
             //this.state.Mode = 'welcome';
             this.setState({
               Mode:'welcome'
             })
-      }.bind(this)}>{this.state.Subject.title}</a></h1>
+      }}>{this.state.Subject.title}</a></h1>
           {this.state.Subject.sub}
         </header>
         <TOC data={this.state.Content}></TOC>
