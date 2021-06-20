@@ -9,7 +9,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      Mode:'read',
+      Mode:'create',
       selected_content_id:2,
       Subject:{title:'WEB', sub:'World Wide Web!'},
       Welcome:{title:'welcome', desc: 'Hello, React!!'},
