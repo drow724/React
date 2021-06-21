@@ -45,11 +45,14 @@ class App extends Component {
         // this.state.Content.push(
         // {id:this.max_counter_id, title:_title, desc:_desc}
         // );
-        var _content =  this.state.Content.concat(
-        {id:this.max_counter_id, title:_title, desc:_desc}
-        )
+        // var _content =  this.state.Content.concat(
+        // {id:this.max_counter_id, title:_title, desc:_desc}
+        // )
+        var newContents = Array.from(this.state.Content);
+        newContents.push({id:this.max_counter_id,
+        title:_title, desc:_desc});
         this.setState({
-          Content:_content
+          Content:newContents
         });
         console.log(_title,_desc)
       }.bind(this)}></CreateContent>
